@@ -1,2 +1,3 @@
+#!/bin/bash
 docker build -t my-reminder .
-docker run -p 3000:3000 -d my-reminder
+docker run -p 3000:3000 my-reminder
