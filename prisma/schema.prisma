@@ -5,9 +5,10 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// removed env DATABASE_URL, don't want to commit the .env file
 datasource db {
   provider = "sqlite"
-  url      = env("DATABASE_URL")
+  url      = "file:./dev.db"
 }
 
 model User {

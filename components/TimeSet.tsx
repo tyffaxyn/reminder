@@ -42,7 +42,7 @@ const TimeSet = ({ id, day, time, title, ackedAt }: ItemProps) => {
     return () => {
       clearTimeout(timeOut);
     }
-  }, [time, day, title, id])
+  }, [time, day, title, id, ackedAt])
 
 
   return (
