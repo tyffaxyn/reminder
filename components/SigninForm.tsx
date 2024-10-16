@@ -35,7 +35,7 @@ const SignInForm = () => {
         type="password"
         placeholder="Password"
       />
-      {formState?.message && <p className="p-2 rounded text-pink-800">{formState.message}</p>}
+      {formState?.message && <p className="pt-2 pl-2 rounded text-pink-800">{formState.message}</p>}
       <Submit label="Sign in" />
       <div className="mt-4 mb-2">
         <Link href="/signup">

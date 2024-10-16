@@ -11,10 +11,16 @@ const authSchema = z.object({
 })
 
 export const registerUser = async (_: FormData, formData: FormData): Promise<{ message: string | null }> => {
-    const data = authSchema.parse({
-      email: formData.get('email'),
-      password: formData.get('password'),
-    })
+    let data;
+    try {
+      data = authSchema.parse({
+        email: formData.get('email'),
+        password: formData.get('password'),
+      })
+    } catch (e) {
+      console.error(e)
+      return { message: 'Enter a valid email address' }
+    }
   
     try {
       const { token } = await signup(data)
@@ -27,10 +33,16 @@ export const registerUser = async (_: FormData, formData: FormData): Promise<{ m
 }
 
 export const signInUser = async (_: FormData, formData: FormData): Promise<{ message: string | null }> => {
-  const data = authSchema.parse({
-    email: formData.get('email'),
-    password: formData.get('password'),
-  })
+  let data;
+  try {
+    data = authSchema.parse({
+      email: formData.get('email'),
+      password: formData.get('password'),
+    })
+  } catch (e) {
+    console.error(e)
+    return { message: 'Enter a valid email address' }
+  }
 
   try {
     const { token } = await signin(data)
