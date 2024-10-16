@@ -27,7 +27,7 @@ const TimeSet = ({ id, day, time, title, ackedAt }: ItemProps) => {
       const [h, m] = time.split(':');
       reminderTime.setHours(parseInt(h));
       reminderTime.setMinutes(parseInt(m));
-      reminderTime.setSeconds(0);
+      reminderTime.setSeconds(30);
       const diffTime = reminderTime.getTime() - date.getTime();
       const acknowledgeTime = new Date(ackedAt).getTime();
 

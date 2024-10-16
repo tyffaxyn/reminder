@@ -29,10 +29,11 @@ Or run prod version of app in docker
 
 ## Nice to haves (if i can spend more time)
 - The application should allow users to set a reminder as a one-time event or a recurring event.
-- Users should be able to set reminders with different priorities (e.g., high, medium, low)
+- The application should allow users to select more then one day.
+- Users should be able to set reminders with different priorities (e.g., high, medium, low).
 - Users must be able to log out of their accounts.
 - Users should have the option to reset their password through email.
-- Add push notifications.
+- Use Notifications API, add push notifications.
 - Add sounds for notifications.
 - Add better error handling.
 - Test in different Time Zone.
